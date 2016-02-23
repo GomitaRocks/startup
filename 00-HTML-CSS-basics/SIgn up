@@ -2,18 +2,18 @@
 <html>
 <body>
 
-	<form>
+	<form action="demo_form.asp">
 	First name:<br>
-	<input type="text" name="firstname">
+	<input type="text" name="firstname" required>
 	<br>
 	Last name:<br>
-	<input type="text" name="lastname">
+	<input type="text" name="lastname" required>
 	<br>
 	E-mail:<br>
-	<input type="text" name="E-mail">
+	<input type="text" name="E-mail" required>
 	<br>
 	Birthday:<br>
-	<input type="text" name="Birthdays">
+	<input type="text" name="Birthdays" required>
 	
 	<br>	
 	<select>
