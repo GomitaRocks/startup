@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="style.css" rel="stylesheet">
+	<link href="Style.css" rel="stylesheet">
 </head>
 
 <body>
-	<header>
+	<header class="header">
 		
 	</header>
 
-	<nav>
-		
+	<nav class="navigation">
+		<p>NEXT</p>
+		<p>BACK</p>
 	</nav>
 
-	<section>
+	<section class="content">
 	<header>
-		
+		<h1>Holy chlorination, Batman!</h1>
 	</header>
+
 	<article>
-		
+		<p>A Hinsdale couple was surprised and a little weirded out to learn Monday that their Batman-themed backyard swimming pool was suddenly drawing a lot of online attention. The 30-foot-wide logo they had painted at the bottom of their swimming pool two decades ago was widely discussed after a Google Maps satellite image of it showed up on a mainstream technology blog. Titled " Wayne Manor, Illinois," the post was the second-most-viewed Sunday on Gizmodo . The blog apparently reposted an...</p>
 	</article>
-	<footer>
-		
+
+	<footer class="footer">
+		<p>By Steve Schmadeke, Tribune reporter | October 18, 2010</p>
 	</footer>
 		
 	</section>
 
-	<aside>
-		
+	<aside class="sidebar">
+		<p>Batman could fly, but he'd crash and die</p>
 	</aside>
 
-	<footer>
-		
+	<footer class="footer">
+		<p>www.chicagotribune.com</p>
 	</footer>
 
 </body>

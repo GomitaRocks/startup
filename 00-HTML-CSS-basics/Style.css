@@ -422,3 +422,50 @@ td,
 th {
   padding: 0;
 }
+
+
+body {
+  font-size:14px;
+  font-family: sans-serif;
+}
+
+header, footer {
+  text-align: center;
+  font-weight:  bold;
+}
+
+section, aside, nav {
+  font-weight:  bold;
+}
+
+header {
+font-size: 46px;
+background-color: #FF00FF;
+}
+
+.header {
+height: 200px;
+background-image: url("http://freewallpaperpage.com/wp-content/uploads/2015/11/tumblr-photography-background-eiffel-0-o-0-3899038.jpg");
+}
+
+.footer {
+font-size: 10px;
+background-color: #FF00FF;
+}
+
+.content {
+font-size: 14px;
+text-align: center;
+}
+
+.navigation {
+font-size: 12px;
+background-color: #0071BC;
+text-align: center;
+}
+
+.sidebar {
+font-size: 10px;
+background-color: #FF00FF;
+}
+
