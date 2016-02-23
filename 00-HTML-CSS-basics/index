@@ -3,8 +3,36 @@
 <head>
 	<link href="style.css" rel="stylesheet">
 </head>
-<body>
 
+<body>
+	<header>
+		
+	</header>
+
+	<nav>
+		
+	</nav>
+
+	<section>
+	<header>
+		
+	</header>
+	<article>
+		
+	</article>
+	<footer>
+		
+	</footer>
+		
+	</section>
+
+	<aside>
+		
+	</aside>
+
+	<footer>
+		
+	</footer>
 
 </body>
 </html>
