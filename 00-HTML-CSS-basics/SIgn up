@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<form>
+	First name:<br>
+	<input type="text" name="firstname">
+	<br>
+	Last name:<br>
+	<input type="text" name="lastname">
+	<br>
+	E-mail:<br>
+	<input type="text" name="E-mail">
+	<br>
+	Birthday:<br>
+	<input type="text" name="Birthdays">
+	
+	<br>	
+	<select>
+	<option value="Basketball">Basketball</option>
+	<option value="Voleyball">Voleyball</option>
+	<option value="Soccer">Soccer</option>
+	<option value="Tenis">Tenis</option>
+	</select>
+
+	<br>
+	<textarea rows="5" cols="40">
+	</textarea>
+
+	<br><br>
+	<input type="submit" value="Submit">
+	<input type="reset" value="Reset">
+	</form>
+
+</body>
+</html>
