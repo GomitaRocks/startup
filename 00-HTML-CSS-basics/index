@@ -5,30 +5,34 @@
 </head>
 
 <body>
-	<header class="header">
-		
+	<header>
+		Hello Batman
 	</header>
 
 	<nav class="navigation">
-		<p>NEXT</p>
-		<p>BACK</p>
+		<ol>
+			<ul>BACK</ul>
+			<ul>NEXT</ul>
+		</ol>
 	</nav>
-
+<div class="box-section">
 	<section class="content">
-	<header>
-		<h1>Holy chlorination, Batman!</h1>
-	</header>
+		<header>
+			<h1>Holy chlorination, Batman!</h1>
+		</header>
 
-	<article>
-		<p>A Hinsdale couple was surprised and a little weirded out to learn Monday that their Batman-themed backyard swimming pool was suddenly drawing a lot of online attention. The 30-foot-wide logo they had painted at the bottom of their swimming pool two decades ago was widely discussed after a Google Maps satellite image of it showed up on a mainstream technology blog. Titled " Wayne Manor, Illinois," the post was the second-most-viewed Sunday on Gizmodo . The blog apparently reposted an...</p>
-	</article>
+		<article>
+			<p>A Hinsdale couple was surprised and a little weirded out to learn Monday that their Batman-themed backyard swimming pool was suddenly drawing a lot of online attention. The 30-foot-wide logo they had painted at the bottom of their swimming pool two decades ago was widely discussed after a Google Maps satellite image of it showed up on a mainstream technology blog. Titled " Wayne Manor, Illinois," the post was the second-most-viewed Sunday on Gizmodo . The blog apparently reposted an...</p>
+		</article>
 
-	<footer class="footer">
-		<p>By Steve Schmadeke, Tribune reporter | October 18, 2010</p>
-	</footer>
-		
+		<footer class="footer">
+			<p>By Steve Schmadeke, Tribune reporter | October 18, 2010</p>
+		</footer>
+
 	</section>
 
+</div>
+	
 	<aside class="sidebar">
 		<p>Batman could fly, but he'd crash and die</p>
 	</aside>
