@@ -430,6 +430,13 @@ body {
   font-family: sans-serif;
 }
 
+.box-section {
+
+  padding: 5px;
+  border: 5px;
+  margin: 5px;
+}
+
 header, footer {
   text-align: center;
   font-weight:  bold;
@@ -440,33 +447,34 @@ section, aside, nav {
 }
 
 header {
-  font-size: 46px;
-  height: 200px;
-  background-image: url("http://freewallpaperpage.com/wp-content/uploads/2015/11/tumblr-photography-background-eiffel-0-o-0-3899038.jpg");
+  font-size: 50px;
+  height: 80px;
+  background-image: url("http://robot6.comicbookresources.com/wp-content/uploads/2013/03/batman-66a.jpg");
   color:white;
-  padding: 20px;
-  border: 20px;
+  padding: 50px;
 }
 
 section header h1 {
+  font-size: 50px;
   color: #4F65AF;
 }
 
-.box-section {
-  width: auto;
-  padding: 30px;
-  border: 25px;
-  margin: 25px;
+section header {
+  padding: 0;
 }
 
 footer {
+  background-color: #4F65AF;
+  color:white;
   font-size: 10px;
-  background-color: #FF00FF;
 }
 
 section {
   font-size: 14px;
-  text-align: center;
+  width: 60%;
+  padding-left: 70px;
+  float: center;
+  display: inline-block;
 }
 
 section >header {
@@ -475,18 +483,35 @@ section >header {
 
 nav >ul>li{
   display: inline-block;
-  padding: 20px;
+  padding: 10px;
+
+}
+
+nav ul {
+  padding: 0;
 }
 
 nav {
   font-size: 12px;
-  text-align: center;
   color: #4F65AF;
   float: left;
+  width: 10%; 
+  display: list-item;
+  border: 1px solid #4F65AF;
 }
 
 aside {
-  font-size: 10px;
-  background-color: #FF00FF;
+  font-size: 12px; 
+  color: #4F65AF; 
+  float:right;
+  width: 20%;  
+  display: inline-block; 
+  border: 1px solid #4F65AF;
+  padding: 10px;
 }
+
+article p {
+  padding-top: 30px;
+}
+
 

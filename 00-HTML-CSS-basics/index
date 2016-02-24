@@ -8,34 +8,56 @@
 	<header>
 		Hello Batman
 	</header>
+	<div id="left">
 
-	<nav class="navigation">
-		<ol>
-			<ul>BACK</ul>
-			<ul>NEXT</ul>
-		</ol>
-	</nav>
-<div class="box-section">
-	<section class="content">
-		<header>
-			<h1>Holy chlorination, Batman!</h1>
-		</header>
+		<div class="box-section">
+			<nav>
+				<ul>
+				<li>Adam west-Batman / Bruce Wayne</li>
+					<li>Burt Ward-Robin / Dick Grayson</li>
+					<li>Lee Meriwether-The Catwoman / Kitka</li>
+					<li>Cesar Romero-The Joker</li>
+				</ul>
+			</nav>
+		</div>
 
-		<article>
-			<p>A Hinsdale couple was surprised and a little weirded out to learn Monday that their Batman-themed backyard swimming pool was suddenly drawing a lot of online attention. The 30-foot-wide logo they had painted at the bottom of their swimming pool two decades ago was widely discussed after a Google Maps satellite image of it showed up on a mainstream technology blog. Titled " Wayne Manor, Illinois," the post was the second-most-viewed Sunday on Gizmodo . The blog apparently reposted an...</p>
-		</article>
+		<section class="content">
+			<header>
+				<h1>Holy chlorination, Batman!</h1>
+			</header>
 
-		<footer class="footer">
-			<p>By Steve Schmadeke, Tribune reporter | October 18, 2010</p>
-		</footer>
+			<article>
+				<p>A Hinsdale couple was surprised and a little weirded out to learn Monday that their Batman-themed backyard swimming pool was suddenly drawing a lot of online attention.
+				<br><br>
+				The 30-foot-wide logo they had painted at the bottom of their swimming pool two decades ago was widely discussed after a Google Maps satellite image of it showed up on a mainstream technology blog. 
+				<br><br>
+				Titled " Wayne Manor, Illinois," the post was the second-most-viewed Sunday on Gizmodo. The blog apparently reposted an image highlighted on virtualglobetrotting.com, a site whose users compile interesting or unusual images captured by Google Maps.
+				<br><br>
+				"I can't believe it — our son sent (the link) to us," said one of the homeowners, who spoke on the condition of anonymity, not unlike the Caped Crusader himself. "It is so strange."
+				<br><br>
+				The couple decided to have the logo painted in their pool about 1990, when their son, then in kindergarten, was obsessed with Batman and wore a cape as often as he could. A painter re-created the logo using a design from a beach towel, the homeowner said. The logo is easily seen in the satellite photo because the pool was being filled when it was taken and the water hadn't yet covered it.
+				<br><br>
+				It has since been touched up about three times. The 15-foot-deep pool has become a neighborhood landmark and was often the site of class picnics and football team dinners.
+				<br><br>
+				The homeowner said it felt odd having strangers from across the country commenting on the property, some of them wondering whose car was parked in their driveway.
+				<br><br>
+				"That's our cleaning lady's car," the homeowner said.</p>
+			</article>
 
-	</section>
+			<footer class="footer">
+				<p>By Steve Schmadeke, Tribune reporter | October 18, 2010</p>
+			</footer>
 
-</div>
-	
-	<aside class="sidebar">
-		<p>Batman could fly, but he'd crash and die</p>
-	</aside>
+		</section>
+
+		<aside class="sidebar">
+			<p>Batman could fly, but he'd crash and die</p>
+			<p>Daniel Radcliffe Wants to Play Robin to Ben Affleck's Batman</p>
+			<p>Batman could fly, but he'd crash and die</p>
+			<p>Superman y Batman se enfrentarÃ¡n en "Dawn of Justice"</p>
+		</aside>
+
+	</div>
 
 	<footer class="footer">
 		<p>www.chicagotribune.com</p>
