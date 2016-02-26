@@ -53,40 +53,80 @@ header {
 
 .article p {
 	font-size: 15px;
-	/*rgin-right: 100px;*/
-	/*dth: 50%;*/
 	display: inline-block;
 }
 
-@media screen and (min-width: 640px) {
-  .column {
-    /*float: left;*/
-    display: inline-block;
-    /*padding-left: 15px;*/
-    /*padding-right: 15px;*/
-  }
-  
-  .column.full { width: 100%; }
-  .column.two-thirds { width: 66.7%; }
-  .column.half { width: 50%; }
-  .column.third { max-width: 33%; }
-  .column.fourth { width: 25%; }
-  .column.flow-opposite { float: right; }  
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.hover-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	opacity: 0;
+	padding: 10px;
+	transition: opacity 0.5s;
 }
 
-.height {
-  /*height: 150px;*/
+
+
+
+
+/*____________________________________________________________________________________________________________________________________________________*/
+
+
+figure {
+	line-height:0em;
+	overflow:hidden;
 }
 
-.container {
+img {
+	max-width:100%;
+	position:relative;
+	clear:both;
+
+}
+
+.grid-cell {
+	position:relative;
+	width:33%;
+	min-height:1em;
+	overflow:hidden;
 	display: block;
+	font-size: 1em;
+	margin: 0;
 }
 
-.column img {
-  width: 100%;
-  height: 100px;
-  position: relative;
-  /*float: left;*/
+.grid-cell:hover .hover-text {
+	opacity: 0.6;
 }
 
+.float-left {
+	float: left;
+}
+
+/*______________________________________________________________________________________________________________________________________________________*/
+
+.grayscale-filter {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+	.do-greyscale .image-effect {
+		filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+		filter: gray;
+		-webkit-filter: grayscale(100%);
+		-moz-transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+	}
+
+.do-greyscale:hover .image-effect {
+	filter: none;
+	-webkit-filter: grayscale(0%);
+}
 
