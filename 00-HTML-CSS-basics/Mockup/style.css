@@ -24,6 +24,18 @@
 	*zoom: 1;
 }
 
+a:-webkit-any-link {
+    color: #222;
+    text-decoration: none;
+    cursor: auto;
+}
+
+body {
+	color: #222;
+    font-family: 'AktivGroteskW01-Regular', sans-serif;
+}
+
+
 header {
 	font-size: 15px;
 	padding: 50px;
@@ -41,14 +53,18 @@ header {
 
 .header .title {
 	display: inline-block;
-	padding: 50px 100px 0 20px;x
+	padding: 50px 100px 0 20px;
+}
+
+.title {
+	font-weight: bold;
 }
 
 .header .article {
 	max-width: 70%;
 	float: right;
 	display: inline-block;
-	padding: 50px 100px 0 20px;
+	padding: 50px 100px 50px 20px;
 }
 
 .article p {
@@ -65,12 +81,62 @@ header {
 	right: 0;
 	background-color: white;
 	opacity: 0;
-	padding: 10px;
+	padding: 20px;
 	transition: opacity 0.5s;
 }
 
+a:hover {
+	text-decoration: underline;
+}
 
+::selection {
+    background: #666;
+    color: #fff;
+    text-shadow: none;
+}
 
+.container  {
+	position: relative;
+
+}
+
+.column {
+  float: left;
+  width: 33%;
+
+}
+
+.column:first-child .grid-cell {
+	padding-right: 0;
+}
+
+.column:last-child .grid-cell {
+	padding-left: 0;
+}
+
+.column:first-child {
+  padding-right: 0;
+}
+
+.column:last-child {
+  padding-left: 0;
+}
+
+.column .grid-cell:last-child {
+  padding-bottom: 10px;
+}
+
+.grid-cell {
+  display: inline-block;
+  padding: 10px;
+  padding-bottom: 0; 
+  width: 100%;
+  position: relative;
+}
+
+.grid-cell:hover .hover-text {
+	opacity: 0.6;
+}
 
 
 
@@ -78,35 +144,16 @@ header {
 /*____________________________________________________________________________________________________________________________________________________*/
 
 
-figure {
-	line-height:0em;
-	overflow:hidden;
-}
-
 img {
-	max-width:100%;
-	position:relative;
-	clear:both;
-
+	max-width: 100%;
+	position: relative;
 }
 
-.grid-cell {
-	position:relative;
-	width:33%;
-	min-height:1em;
-	overflow:hidden;
-	display: block;
-	font-size: 1em;
-	margin: 0;
+h3	 {
+	color: #222;
 }
 
-.grid-cell:hover .hover-text {
-	opacity: 0.6;
-}
 
-.float-left {
-	float: left;
-}
 
 /*______________________________________________________________________________________________________________________________________________________*/
 
