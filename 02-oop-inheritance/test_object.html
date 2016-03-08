@@ -1,0 +1,41 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript" src="Movie.js"></script>
+	<script type="text/javascript">
+
+
+	Object.prototype.extend = function(obj) {
+		for (var i in obj) {
+			if (obj.hasOwnProperty(i)) {
+				this[i] = obj[i];
+			}
+		}
+	};
+
+	var DownloadableMovie = function(){
+		this.download = function(){};
+	}
+
+	DownloadableMovie.extend(Movie);
+
+
+	rambo = new Movie();
+	rambo.set('title', 'Rambo');
+
+	matrix = new Movie();
+	matrix.set('title', 'Matrix');
+
+	batman = new Movie();
+	batman.set('title', 'Batman');
+
+	MrNoBody = new Movie();
+	MrNoBody.set('title', 'MrNoBody');
+
+	</script>
+</body>
+</html>
+
