@@ -7,21 +7,56 @@
 	<script type="text/javascript" src="Movie.js"></script>
 	<script type="text/javascript">
 
-
-	Object.prototype.extend = function(obj) {
-		for (var i in obj) {
-			if (obj.hasOwnProperty(i)) {
-				this[i] = obj[i];
-			}
-		}
+	var MovieObserver = function() {
+		this.playing = function(title) {
+			console.log("playing " + title);
+		};
+		this.stopped = function(title) {
+			console.log("stopped " + title);
+		};
 	};
 
-	var DownloadableMovie = function(){
-		this.download = function(){};
+	function extend(destination, source) {
+		for (var k in source) {
+			if (source.hasOwnProperty(k)) {
+				destination[k] = source[k];
+			}
+		}
+		return destination; 
 	}
 
-	DownloadableMovie.extend(Movie);
+	var DownloadableMovie = function(){
+		this.download = function(){};	
+	};
+	extend(DownloadableMovie.prototype, new Movie());
 
+	var Social = function(){
+		this.share = function(friendName){
+			console.log('Sharing '+this.title+' with '+friendName);
+		};
+		this.like = function(){
+			console.log('You like '+this.title);
+		};
+		return this;
+	}
+	Social.call(Movie.prototype);
+
+
+	var Actor = function(name, age){
+		this.name = name;
+		this.age = age;
+	}
+
+	leonardo = new Actor('Leonardo DiCaprio', 41);
+	eddie = new Actor('Eddie Redmayne', 34);
+	natalie = new Actor('Natalie Dormer', 34);
+
+	jensMovie = new Movie();
+	jensMovie.set('title','Jennifer Adventures');
+	jensMovie.set('actors', {leonardo,eddie,natalie});
+
+	theHobbit = new DownloadableMovie();
+	theHobbit.set('title', 'The Hobbit');
 
 	rambo = new Movie();
 	rambo.set('title', 'Rambo');
@@ -34,6 +69,7 @@
 
 	MrNoBody = new Movie();
 	MrNoBody.set('title', 'MrNoBody');
+
 
 	</script>
 </body>
