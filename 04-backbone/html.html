@@ -1,24 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Movies</title>
 </head>
+
 <body>
 
 <div id="render_here">
-	
+	first place holder	
 </div>
 
-<script id="entry-template" type="text/x-handlebars-template">
+<div id="render_here_again">
+	second place holder
+</div>
 
-<div class="entry">
-  <h1>Title{{title}}</h1>
-  <div class="body">
-   {{#list movies}}{{Name}} {{Year}} {{Description}}{{/list}}
-  </div>
+<script id="first-template" type="text/x-handlebars-template">
+
+<div>
+ 	<h1 style="color:green">{{title}}</h1>
+
+ 	<h2 style="color:red">{{{body}}}</h2>
+   
 </div>
 
 </script>
+
+
+<div class="post">
+	<h2>By {{fullName author}} - {{body}}</h2>
+	<h1 style="color:blue">comments</h1>
+
+	<ul>
+		{{#each comments}}
+			<li>By {{fullName}} - {{body}}</li>
+		{{/each}}
+	</ul>
+</div>
+
+
+
+<div id="selections">
+	{{#each headers}}
+		<input type="checkbox" id="{{id}}">
+		<label for={{id}}>{{items}}</label>
+
+	{{/each}}
+</div>
+
+
+
+<!-- Write one Handlebars template to show the details of a movie (name, year, description or plot, genre, etc). Use imdb or Netflix for inspiration. -->
+
+
+
+
+
+
 
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
