@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Movies</title>
@@ -8,46 +9,73 @@
 
 <body>
 
+<div class="post">
+	<!-- <h2>By {{fullName author}} - {{body}}</h2> -->
+	<h1 style="color:blue">New Movies</h1>
+	<h2>In Theaters</h2>
+</div>
+
+
 <div id="render_here">
 	first place holder	
 </div>
 
-<div id="render_here_again">
-	second place holder
-</div>
 
 <script id="first-template" type="text/x-handlebars-template">
 
-<div>
- 	<h1 style="color:green">{{title}}</h1>
 
- 	<h2 style="color:red">{{{body}}}</h2>
-   
-</div>
+
+<div>
+		<div>
+			<div class="img">{{{img}}}</div>
+
+			<div class="container">
+				<div class="title">{{title}} </div>
+				<div class="year">{{year}}</div>
+				<div class="genre">{{genre}}</div>  
+				<div class="duration">{{duration}} </div> 
+				<div class="description">{{description}}</div>
+				<div class="director">{{director}}</div>  
+				<div class="stars">{{stars}}</div> 
+
+			</div>
+		</div>
+	</div>
 
 </script>
 
+<!-- <div class="movies">
+	<div>
+	{{#each newMovies}}
+		<div>
+			<div class="img">{{{img}}}</div>
 
-<div class="post">
-	<h2>By {{fullName author}} - {{body}}</h2>
-	<h1 style="color:blue">comments</h1>
+			<div class="container">
+				<div class="title">{{title}} </div>
+				<div class="year">{{year}}</div>
+				<div class="genre">{{genre}}</div>  
+				<div class="duration">{{duration}} </div> 
+				<div class="description">{{description}}</div>
+				<div class="director">{{director}}</div>  
+				<div class="stars">{{stars}}</div> 
 
-	<ul>
-		{{#each comments}}
-			<li>By {{fullName}} - {{body}}</li>
-		{{/each}}
-	</ul>
+			</div>
+		</div>
+	{{/each}}
+	</div> -->
+
 </div>
 
 
 
-<div id="selections">
+
+<!-- <div id="selections">
 	{{#each headers}}
 		<input type="checkbox" id="{{id}}">
 		<label for={{id}}>{{items}}</label>
 
 	{{/each}}
-</div>
+</div> -->
 
 
 
@@ -61,6 +89,10 @@
 
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
+<script type="text/javascript" src="node_modules/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="node_modules/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="node_modules/requirejs/require.js"></script>
 <script type="text/javascript" src="handlebar.js"></script>
+
 </body>
 </html>

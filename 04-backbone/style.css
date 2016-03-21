@@ -1,0 +1,12 @@
+.img {
+	float: left;
+	display: inline;
+	width: 35%;
+	margin: 10px;
+}
+
+.container {
+	float: left;
+	display: inline;
+	width: 65%;
+} 
