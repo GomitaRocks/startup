@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Movies</title>
@@ -15,21 +16,48 @@
 	<h2>In Theaters</h2>
 </div>
 
+<table class="table">
+<thead>
+	<tr>
+		<th>Director</th>
+		<th>Title</th>
+		<th>Year</th>
+		<th>Image url</th>
+		<th>genre</th>
+		<th>duration</th>
+		<th>description</th>
+		<th>stars</th>
+		<th>Action</th>	
+	</tr>
+	<tr>
+		<td><input class="form-control director-input"></input></td>
+		<td><input class="form-control title-input"></input></td>
+		<td><input class="form-control year-input"></input></td>
+		<td><input class="form-control image-input"></input></td>
+		<td><input class="form-control genre-input"></input></td>
+		<td><input class="form-control duration-input"></input></td>
+		<td><input class="form-control description-input"></input></td>
+		<td><input class="form-control stars-input"></input></td>
+		<td><button class="btn btn-primary add-movie">Add</button></td>
+	</tr>
+</thead>
+<tbody class="Movies-List"></tbody>
+
+</table>
 
 <div id="render_here">
-	first place holder	
+	
 </div>
 
 
 <script id="first-template" type="text/x-handlebars-template">
 
-
-
 <div>
 		<div>
-			<div class="img">{{{img}}}</div>
+			<div class="img"><img src='{{{img}}}'></div>
 
 			<div class="container">
+				<button class="detail">Compra ¡ya!</button>
 				<div class="title">{{title}} </div>
 				<div class="year">{{year}}</div>
 				<div class="genre">{{genre}}</div>  
@@ -86,7 +114,14 @@
 
 
 
+<script type="text/template" class="movie-list-template">
+	<td><span class="author"><%= author %></span></td>
+	<td><span class="author"><%= title %></span></td>
+	<td><span class="author"><%= url %></span></td>
+	<td><button class="btn btn-warning edit-movie">Edit</button></td>
+	<td><button class="btn btn-danger delet-movie">Delete</button></td>
 
+</script>
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
 <script type="text/javascript" src="node_modules/underscore/underscore-min.js"></script>
