@@ -146,22 +146,23 @@ requirejs (["Views/viewone.js", "Views/viewtwo.js"], function(movieView, moviesV
 		img:"http:\/\/ia.media-imdb.com/images/M/MV5BMjEyOTI3NDQwN15BMl5BanBnXkFtZTgwNjExOTIwODE@._V1_UX182_CR0,0,182,268_AL_.jpg"
 			});
 
-
 	var moviesList = new moviesCollection([terminator, rambo, rocky, simcity, batman]);
-
-
+/*
 	var movieView = new movieView({ el: "#render_here", model: batman});
-	movieView.render();
+	movieView.render();*/
 
 	var moviesView = new moviesView({ el: "#render_here", model: moviesList});
 	moviesView.render();
+
+	
+
 
 	$(".add-movie").on("click", function(){
 		var movie = new movieModel({
 			director: $(".director-input").val(),
 			title: $(".title-input").val(),
 			year: $(".year-input").val(),
-			img: $(".image-input").val(),
+			img: $(".img-input").val(),
 			genre: $(".genre-input").val(),
 			duration: $(".duration-input").val(),
 			description: $(".description-input").val(),
@@ -169,7 +170,12 @@ requirejs (["Views/viewone.js", "Views/viewtwo.js"], function(movieView, moviesV
 		});
 		moviesList.add(movie);
 		alert('The movie "'+$(".title-input").val()+'" was added succesfully');
-	})
+	});
+
+	$(".back-button").on("click", function(){
+		$('#render_here').html('');
+		moviesView.render();
+	});
 });
 
 

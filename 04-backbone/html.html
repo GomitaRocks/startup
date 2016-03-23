@@ -16,7 +16,7 @@
 	<h2>In Theaters</h2>
 </div>
 
-<table class="table">
+<table class="table add-table">
 <thead>
 	<tr>
 		<th>Director</th>
@@ -33,7 +33,7 @@
 		<td><input class="form-control director-input"></input></td>
 		<td><input class="form-control title-input"></input></td>
 		<td><input class="form-control year-input"></input></td>
-		<td><input class="form-control image-input"></input></td>
+		<td><input class="form-control img-input"></input></td>
 		<td><input class="form-control genre-input"></input></td>
 		<td><input class="form-control duration-input"></input></td>
 		<td><input class="form-control description-input"></input></td>
@@ -45,6 +45,8 @@
 
 </table>
 
+<button class="btn btn-warning back-button">Back</button>
+
 <div id="render_here">
 	
 </div>
@@ -52,6 +54,39 @@
 
 <script id="first-template" type="text/x-handlebars-template">
 
+<div class="buttons">
+	<button class="btn btn-primary edit-button">Edit</button>
+	<button class="btn btn-danger delete-button">Delete</button>
+	
+</div>
+<table class="table edit-table">
+<thead>
+	<tr>
+		<th>Director</th>
+		<th>Title</th>
+		<th>Year</th>
+		<th>Image url</th>
+		<th>genre</th>
+		<th>duration</th>
+		<th>description</th>
+		<th>stars</th>
+		<th>Action</th>	
+	</tr>
+	<tr>
+		<td><input class="form-control director-edit"></input></td>
+		<td><input class="form-control title-edit"></input></td>
+		<td><input class="form-control year-edit"></input></td>
+		<td><input class="form-control img-edit"></input></td>
+		<td><input class="form-control genre-edit"></input></td>
+		<td><input class="form-control duration-edit"></input></td>
+		<td><input class="form-control description-edit"></input></td>
+		<td><input class="form-control stars-edit"></input></td>
+		<td><button class="btn btn-primary edit-movie">Edit</button></td>
+	</tr>
+</thead>
+<tbody class="Movies-List"></tbody>
+
+</table>
 <div>
 		<div>
 			<div class="img"><img src='{{{img}}}'></div>
@@ -110,7 +145,7 @@
 <!-- Write one Handlebars template to show the details of a movie (name, year, description or plot, genre, etc). Use imdb or Netflix for inspiration. -->
 
 
-
+<!-- 
 
 
 
@@ -121,7 +156,7 @@
 	<td><button class="btn btn-warning edit-movie">Edit</button></td>
 	<td><button class="btn btn-danger delet-movie">Delete</button></td>
 
-</script>
+</script> -->
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
 <script type="text/javascript" src="node_modules/underscore/underscore-min.js"></script>
