@@ -7,7 +7,7 @@ define ([], function(){
 		},
 
 		render: function(){
-			var template = Handlebars.compile( $("#first-template").html() );
+			var template = Handlebars.compile($("#first-template").html());
 			var el_html = template(this.model.toJSON());
 			
 
@@ -15,7 +15,7 @@ define ([], function(){
 			return this;
 		},
 
-		events: {
+			events: {
 			"click .edit-movie": "edit",
 			"click .detail": "click",
 			"click .edit-button": "show",	

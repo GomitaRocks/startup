@@ -82,8 +82,6 @@
 
 /*Vista backbone*/
 
-requirejs (["Views/viewone.js", "Views/viewtwo.js"], function(movieView, moviesView){
-
 	var movieModel = Backbone.Model.extend({
 		default: {
 			title:"",
@@ -99,6 +97,10 @@ requirejs (["Views/viewone.js", "Views/viewtwo.js"], function(movieView, moviesV
 	var moviesCollection = Backbone.Collection.extend({
 		model: movieModel
 	});
+
+requirejs (["Views/viewone.js", "Views/viewtwo.js"], function(movieView, moviesView){
+
+	
 
 	var terminator = new movieModel({
 		title:"terminator - 1ª parte",
