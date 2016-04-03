@@ -39,7 +39,18 @@ define(function(require){
 		},
 
 		characters: function(){
+			var timeStamp = this.ts;
+			var hash = md5(timeStamp+this.privateKey+this.publicKey);
+			var charactersModel = require('models/CharactersModel');
+			var models = new charactersModel();
+			models.fetch({ data: $.param({ apikey: this.publicKey, ts: timeStamp, hash: hash}) });
+			var charactersView = require('views/CharactersView');
+			var characters = new charactersView({
+				el: $('#comic'),
+				model:models
+			});
 
+			characters.render();
 		},
 
 		comic: function(id){
@@ -57,8 +68,19 @@ define(function(require){
 			comic.render();
 		},
 
-		character: function(){
+		character: function(id){
+			var timeStamp = this.ts;
+			var hash = md5(timeStamp+this.privateKey+this.publicKey);
+			var characterModel = require('models/CharacterModel');
+			var models = new characterModel({'id':id});
+			models.fetch({ data: $.param({ apikey: this.publicKey, ts: timeStamp, hash: hash}) });
+			var characterView = require('views/CharacterView');
+			var character = new characterView({
+				el: $('#comic'),
+				model:models
+			});
 
+			character.render();
 		}
 
 

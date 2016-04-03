@@ -68,6 +68,42 @@
 		</div>
 	</script>
 
+	<script type="text/html" id="characters-template">
+		<div>
+			<div>
+				
+					{{#each results}}
+					<div class="container">
+						<div class="img"><img src='{{{thumbnail.path}}}.{{{thumbnail.extension}}}'></div>
+						<div class="name">{{name}} </div>
+						<a href="#characters/{{id}}">Ver</a>
+						</div>
+											
+					</div>
+					{{/each}}
+			</div>
+		</div>
+	</script>
+
+<script type="text/html" id="character-template">
+		<div>
+			<div>
+				<div class="img"><img src='{{{thumbnail.path}}}.{{{thumbnail.extension}}}'></div>
+					
+					<div class="container">
+						<div class="name">{{name}} </div>
+						<div class="description">{{description}}</div>
+						<div class="creators">{{#each comics.items}}
+						    <li>{{name}}</li>
+						 	{{/each}}
+						</div>
+											
+					</div>
+
+			</div>
+		</div>
+	</script>
+
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
 <script type="text/javascript" src="node_modules/underscore/underscore-min.js"></script>
