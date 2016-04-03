@@ -2,7 +2,8 @@ define(function(require){
 	return Backbone.Router.extend({
 		routes: {
 			'': 'index',
-			'comics': 'comics',
+			'comics/:quantity/:page': 'comics',
+			'comics/:name/:quantity/:page': 'comicsSearch',			
 			'characters': 'characters',
 			'comics/:id': 'comic',
 			'characters/:id': 'character'
@@ -23,12 +24,36 @@ define(function(require){
 			index.render();
 		},
 
-		comics: function(){
+		comicsSearch: function(name, quantity, page){
 			var timeStamp = this.ts;
 			var hash = md5(timeStamp+this.privateKey+this.publicKey);
+			var limit = quantity;
+			var offset = (page-1)*quantity;
 			var comicsModel = require('models/ComicsModel');
 			var models = new comicsModel();
-			models.fetch({ data: $.param({ apikey: this.publicKey, ts: timeStamp, hash: hash}) });
+			models.fetch({ data: $.param({ title: name, limit: limit, offset: offset, apikey: this.publicKey, ts: timeStamp, hash: hash}),
+				succes:function(){
+					this.attributes.data.name = name;
+				}
+			 });
+			
+			var comicsView = require('views/ComicsView');
+			var comics = new comicsView({
+				el: $('#comic'),
+				model:models
+			});
+
+			comics.render();
+		},
+
+		comics: function(quantity,page){
+			var timeStamp = this.ts;
+			var hash = md5(timeStamp+this.privateKey+this.publicKey);
+			var limit = quantity;
+			var offset = (page-1)*quantity;
+			var comicsModel = require('models/ComicsModel');
+			var models = new comicsModel();
+			models.fetch({ data: $.param({ limit: limit, offset: offset, apikey: this.publicKey, ts: timeStamp, hash: hash}) });
 			var comicsView = require('views/ComicsView');
 			var comics = new comicsView({
 				el: $('#comic'),

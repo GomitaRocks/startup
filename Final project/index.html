@@ -8,6 +8,8 @@
 	<title></title>
 </head>
 <body>
+	<input type="text" placeholder="Search" id="search-comic"><br>
+
 	<div id="comic">
 	</div>
 
@@ -40,16 +42,19 @@
 	<script type="text/html" id="comics-template">
 		<div>
 			<div>
-				
+					
 					{{#each results}}
 					<div class="container">
 						<div class="img"><img src='{{{images.0.path}}}.{{{images.0.extension}}}'></div>
 						<div class="title">{{title}} </div>
 						<a href="#comics/{{id}}">Ver</a>
 						</div>
-											
 					</div>
 					{{/each}}
+
+					<a href="#comics{{#if name}}/{{name}}{{/if}}/{{limit}}/{{prev}}">Prev</a>
+					<a href="#comics/{{limit}}/{{next}}">Next</a>
+
 			</div>
 		</div>
 	</script>
@@ -59,7 +64,7 @@
 		<div>
 			<div>
 				<div>
-					<a href="#comics">Ver Comics</a>
+					<a href="#comics/20/1">Ver Comics</a>
 				</div>
 				<div>
 					<a href="#characters">Ver Characters</a>
