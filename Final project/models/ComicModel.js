@@ -1,8 +1,8 @@
 define(function(){
 	return Backbone.Model.extend({
-		urlRoot: 'http://rest-service.guides.spring.io/greeting',
+		urlRoot: 'http://gateway.marvel.com:80/v1/public/comics',
 		url: function(){
-			return this.urlRoot + '?name=' + this.id;
+			return this.urlRoot + '/' + this.id;
 		}
 	});
 });

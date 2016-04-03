@@ -8,18 +8,55 @@
 	<title></title>
 </head>
 <body>
-	<div id="hello">
+	<div id="comic">
 	</div>
 
-	<script type="text/html" id="hello-template">
-		<p>The ID is <%= id %></p>
-		<p>The content is <%= content %></p>
+	<script type="text/html" id="comic-template">
+		<div>
+			<div>
+				<div class="img"><img src='{{{images.0.path}}}.{{{images.0.extension}}}'></div>
+					
+					<div class="container">
+						<div class="title">{{title}} </div>
+						<div class="description">{{description}}</div>
+						<div class="collections">{{collections.0.name}}</div>
+						<div class="creators">{{#each creators.items}}
+						    <li>{{name}}-{{role}}</li>
+						 	{{/each}}
+						</div>
+											
+					</div>
+
+			</div>
+		</div>
 	</script>
+
+	<script type="text/html" id="comics-template">
+		<div>
+			<div>
+				<div class="img"><img src='{{{images.0.path}}}.{{{images.0.extension}}}'></div>
+					
+					<div class="container">
+						<div class="title">{{title}} </div>
+						<div class="description">{{description}}</div>
+						<div class="collections">{{collections.0.name}}</div>
+						<div class="creators">{{#each creators.items}}
+						    <li>{{name}}-{{role}}</li>
+						 	{{/each}}
+						</div>
+											
+					</div>
+
+			</div>
+		</div>
+	</script>
+
 
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
 <script type="text/javascript" src="node_modules/underscore/underscore-min.js"></script>
 <script type="text/javascript" src="node_modules/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="node_modules/blueimp-md5/js/md5.min.js"></script>
 <script type="text/javascript" src="node_modules/requirejs/require.js"></script>
 <script type="text/javascript" src="index.js"></script>
 </body>

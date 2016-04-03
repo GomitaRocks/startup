@@ -1,7 +1,7 @@
 define(function(){
 	return Backbone.View.extend({
 		initialize: function() {
-			this.template = Handlebars.compile($("#comic-template").html());
+			this.template = Handlebars.compile($("#comics-template").html());
 			this.listenTo(this.model, 'change', this.render);
 		},
 
