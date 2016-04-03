@@ -34,19 +34,16 @@
 	<script type="text/html" id="comics-template">
 		<div>
 			<div>
-				<div class="img"><img src='{{{images.0.path}}}.{{{images.0.extension}}}'></div>
-					
+				
+					{{#each results}}
 					<div class="container">
+						<div class="img"><img src='{{{images.0.path}}}.{{{images.0.extension}}}'></div>
 						<div class="title">{{title}} </div>
-						<div class="description">{{description}}</div>
-						<div class="collections">{{collections.0.name}}</div>
-						<div class="creators">{{#each creators.items}}
-						    <li>{{name}}-{{role}}</li>
-						 	{{/each}}
+						
 						</div>
 											
 					</div>
-
+					{{/each}}
 			</div>
 		</div>
 	</script>

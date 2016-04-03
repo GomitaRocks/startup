@@ -10,16 +10,15 @@ requirejs (['views/ComicView.js', 'models/ComicModel', 'models/ComicsModel',
 	models = new comicsModel();
 
 	models.fetch({ data: $.param({ apikey: publicKey, ts: ts, hash: hash}) });
-	console.log(models.attributes);
-
+	
 	model.fetch({ data: $.param({ apikey: publicKey, ts: ts, hash: hash}) });
 	
 	$(document).ready(function(){
-		var comic = new comicView({
+		/*var comic = new comicView({
 			el: $('#comic'),
 			model:model
 		});
-		comic.render();
+		comic.render();*/
 
 		var comics = new comicsView({
 			el: $('#comic'),

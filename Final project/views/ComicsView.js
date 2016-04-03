@@ -6,7 +6,8 @@ define(function(){
 		},
 
 		render: function(){
-			this.$el.html(this.template(this.model.attributes.data.results[0]));
+			console.log(this.model);
+			this.$el.html(this.template(this.model.attributes.data));
 		}
 	})
 })
