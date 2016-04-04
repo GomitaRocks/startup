@@ -32,9 +32,9 @@ define(function(require){
 			var comicsModel = require('models/ComicsModel');
 			var models = new comicsModel();
 			models.fetch({ data: $.param({ title: name, limit: limit, offset: offset, apikey: this.publicKey, ts: timeStamp, hash: hash}),
-				succes:function(){
-					this.attributes.data.name = name;
-				}
+				/*success:function(){
+					models.attributes.data.name = name;
+				}*/
 			 });
 			
 			var comicsView = require('views/ComicsView');

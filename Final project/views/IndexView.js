@@ -5,6 +5,7 @@ define(function(){
 		},
 
 		render: function(){
+			$('#search-comic').hide();
 			this.$el.html(this.template());
 		}
 	})
