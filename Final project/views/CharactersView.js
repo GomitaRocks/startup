@@ -6,7 +6,8 @@ define(function(){
 		},
 
 		render: function(){
-			console.log(this.model);
+			$('body').css('background-image', 'none');
+			$('body').css('background-color', 'black');
 			this.$el.html(this.template(this.model.attributes.data));
 		}
 	})

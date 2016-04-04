@@ -1,0 +1,61 @@
+body {
+	font-size: 14px;
+	color: white;
+	background-image: url("images/fondo.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-color: black;
+	height: 0;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.comics {
+	width: 50%;
+	height: 700px;
+	float:left;
+	background-color: black;
+	opacity: 0;
+	transition: all 2s;
+	padding:50px;
+	font-size: 60px;
+}
+
+.comics:hover {
+	opacity: 0.6;
+}
+
+.characters {
+	width: 50%;
+	height: 700px;
+	float: right;
+	background-color: black;
+	opacity: 0;
+	transition: all 2s;
+	padding:50px;
+	font-size: 60px;
+}
+
+.characters:hover {
+	opacity: 0.6;
+}
+
+#comic {
+	height: 100%;
+}
+
+#search-comic {
+	display: none;
+}
+
+#comics-template .container .img {
+	width: 100px;
+}

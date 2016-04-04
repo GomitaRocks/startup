@@ -8,6 +8,8 @@ define(function(){
 
 		render: function(){
 			$('#search-comic').show();
+			$('body').css('background-image', 'none');
+			$('body').css('background-color', 'black');
 			var page = this.model.attributes.data.offset/this.model.attributes.data.limit+1;
 			this.model.attributes.data.prev = page-1;
 			this.model.attributes.data.next = page+1;
