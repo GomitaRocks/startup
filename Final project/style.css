@@ -1,9 +1,6 @@
 body {
 	font-size: 14px;
 	color: white;
-	background-image: url("images/fondo.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
 	background-color: black;
 	height: 0;
 }
@@ -24,7 +21,7 @@ a:hover {
 	float:left;
 	background-color: black;
 	opacity: 0;
-	transition: all 2s;
+	transition: all 1s;
 	padding:50px;
 	font-size: 60px;
 }
@@ -52,10 +49,84 @@ a:hover {
 	height: 100%;
 }
 
-#search-comic {
-	display: none;
+#search {
+	text-align: center;
+	padding: 50px;
 }
 
-#comics-template .container .img {
-	width: 100px;
+#search-comic {
+	display: none;
+	color: black;
+}
+
+#search-character {
+	display: none;
+	color: black;
+}
+
+.container-comics {
+	display: inline-block;
+	height: 420px;
+	width: 220px;
+}
+
+.container-comics img {
+	width: 200px;
+	height: 320px;
+	padding: 10px;
+}
+
+.container-comics .text {
+	height: 80px;
+}
+
+.container-characters {
+	display: inline-block;
+	height: 420px;
+	width: 220px;
+}
+
+.container-characters img {
+	width: 200px;
+	height: 320px;
+	padding: 10px;
+}
+
+.container-characters .text {
+	height: 80px;
+}
+
+#search-comic {
+	margin: 0 auto;
+
+}
+
+.container-description {
+	float: left;
+	width: 40%;
+	padding-top: 50px;
+	padding-left: 50px;
+	text-align: right;
+	font-size: 20px;
+}
+
+.img-description {
+	float: right;
+	width: 40%;
+}
+
+.img-description img {
+	width: 300px;
+}
+
+.prev {
+	font-size: 20px;
+	display: inline-block;
+	width: 50px;
+	padding: 100px;
+}
+
+.next {
+	font-size: 20px;
+	display: inline-block;
 }

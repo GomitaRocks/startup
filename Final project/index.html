@@ -9,103 +9,86 @@
 </head>
 <body>
 
-	<input type="text" placeholder="Search" id="search-comic"/>
+	<div id="search">
+		<input type="text" placeholder="Search" id="search-comic"/>
+		<input type="text" placeholder="Search" id="search-character"/>
+	</div>
 
 	<div id="comic">
 	</div>
 
 	<script type="text/html" id="comic-template">
-		<div>
-			<div>
-				<div class="img"><img src='{{{images.0.path}}}.{{{images.0.extension}}}'></div>
-					
-					<div class="container">
-						<div class="title">{{title}} </div>
-						<div class="description">{{description}}</div>
-						<div class="collections">{{collections.0.name}}</div>
-						<div class="creators">{{#each creators.items}}
-						    <li>{{name}}-{{role}}</li>
-						 	{{/each}}
-						</div>
-						<div class="reader">{{#each urls}}
-							{{#if type value="reader"}}
-								<a href="{{url}}" target="_blank">Leer</a>
-							{{/if}}
-						{{/each}}
-						</div>
-											
-					</div>
-
+		<div class="img-description"><img src='{{{images.0.path}}}.{{{images.0.extension}}}'>
+		</div>
+		<div class="container-description">
+			<div class="title">{{title}} </div>
+			<div class="description">{{description}}</div>
+			<div class="collections">{{collections.0.name}}</div>
+			<div class="creators">{{#each creators.items}}
+			    <li>{{name}}-{{role}}</li>
+			 	{{/each}}
+			</div>
+			<div class="reader">{{#each urls}}
+				{{#if type value="reader"}}
+					<a href="{{url}}" target="_blank">Leer</a>
+				{{/if}}
+			{{/each}}
 			</div>
 		</div>
 	</script>
 
 	<script type="text/html" id="comics-template">
-		<div>
-			<div>
-					
-					{{#each results}}
-					<div class="container">
-						<div class="img"><img src='{{{images.0.path}}}.{{{images.0.extension}}}'></div>
-						<div class="title">{{title}} </div>
-						<a href="#comics/{{id}}">Ver</a>
-						</div>
-					</div>
-					{{/each}}
-
-					<a href="#comics{{#if name}}/{{name}}{{/if}}/{{limit}}/{{prev}}">Prev</a>
-					<a href="#comics/{{limit}}/{{next}}">Next</a>
-
-			</div>
+		{{#each results}}
+		<div class="container-comics">
+			<img src='{{{images.0.path}}}.{{{images.0.extension}}}'>
+			<div class="text">
+				<div class="title">{{title}} </div>
+				<a href="#comics/{{id}}">Ver</a>
+			</div>	
 		</div>
+		{{/each}}
+
+		<div class="prev"><a href="#comics{{#if name}}/{{name}}{{/if}}/{{limit}}/{{prev}}">Prev</a></div>
+		<div class="next"><a href="#comics{{#if name}}/{{name}}{{/if}}/{{limit}}/{{next}}">Next</a></div>
 	</script>
 
-
-<script type="text/html" id="index-template">
-		<div>
-			<div>
-				<div class="comics">
-					<a href="#comics/20/1">Ver Comics</a>
-				</div>
-				<div class="characters">
-					<a href="#characters">Ver Characters</a>
-				</div>
-			</div>
+	<script type="text/html" id="index-template">
+		<div class="comics">
+			<a href="#comics/20/1">Ver Comics</a>
+		</div>
+		<div class="characters">
+				<a href="#characters/20/1">Ver Characters</a>
 		</div>
 	</script>
 
 	<script type="text/html" id="characters-template">
 		<div>
-			<div>
-				
-					{{#each results}}
-					<div class="container">
-						<div class="img"><img src='{{{thumbnail.path}}}.{{{thumbnail.extension}}}'></div>
-						<div class="name">{{name}} </div>
-						<a href="#characters/{{id}}">Ver</a>
-						</div>
-											
-					</div>
-					{{/each}}
+			<div>	
+				{{#each results}}
+				<div class="container-characters">
+					<div class="img"><img src='{{{thumbnail.path}}}.{{{thumbnail.extension}}}'></div>
+					<div class="name">{{name}} </div>
+					<a href="#characters/{{id}}">Ver</a>
+				</div>
+				{{/each}}
+				<a href="#characters{{#if name}}/{{name}}{{/if}}/{{limit}}/{{prev}}">Prev</a>
+				<a href="#characters{{#if name}}/{{name}}{{/if}}/{{limit}}/{{next}}">Next</a>						
 			</div>
 		</div>
 	</script>
 
-<script type="text/html" id="character-template">
+	<script type="text/html" id="character-template">
 		<div>
 			<div>
-				<div class="img"><img src='{{{thumbnail.path}}}.{{{thumbnail.extension}}}'></div>
-					
-					<div class="container">
-						<div class="name">{{name}} </div>
-						<div class="description">{{description}}</div>
-						<div class="creators">{{#each comics.items}}
-						    <li>{{name}}</li>
-						 	{{/each}}
-						</div>
-											
+				<div class="img-description"><img src='{{{thumbnail.path}}}.{{{thumbnail.extension}}}'></div>
+				<div class="container-description">
+					<div class="name">{{name}} </div>
+					<div class="description">{{description}}</div>
+					<div class="creators">{{#each comics.items}}
+					    <li>{{name}}</li>
+					 	{{/each}}
 					</div>
-
+				</div>
 			</div>
 		</div>
 	</script>

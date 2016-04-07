@@ -5,6 +5,12 @@ define(function(){
 		},
 
 		render: function(){
+			$('body').css('background-image', 'url("images/fondo.jpg")');
+			$('body').css('background-repeat', 'no-repeat');
+			$('body').css('background-size', '100%');
+				
+			$('#search-character').hide();
+			$('#search').hide();
 			$('#search-comic').hide();
 			this.$el.html(this.template());
 		}

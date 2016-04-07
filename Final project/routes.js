@@ -4,7 +4,8 @@ define(function(require){
 			'': 'index',
 			'comics/:quantity/:page': 'comics',
 			'comics/:name/:quantity/:page': 'comicsSearch',			
-			'characters': 'characters',
+			'characters/:name/:quantity/:page': 'charactersSearch',			
+			'characters/:quantity/:page': 'characters',
 			'comics/:id': 'comic',
 			'characters/:id': 'character'
 		},
@@ -31,19 +32,14 @@ define(function(require){
 			var offset = (page-1)*quantity;
 			var comicsModel = require('models/ComicsModel');
 			var models = new comicsModel();
-			models.fetch({ data: $.param({ title: name, limit: limit, offset: offset, apikey: this.publicKey, ts: timeStamp, hash: hash}),
-				/*success:function(){
-					models.attributes.data.name = name;
-				}*/
-			 });
-			
+			models.fetch({ data: $.param({ title: name, limit: limit, offset: offset, apikey: this.publicKey, ts: timeStamp, hash: hash})});
 			var comicsView = require('views/ComicsView');
 			var comics = new comicsView({
 				el: $('#comic'),
 				model:models
 			});
+			comics.addName(name);
 
-			comics.render();
 		},
 
 		comics: function(quantity,page){
@@ -60,22 +56,39 @@ define(function(require){
 				model:models
 			});
 
-			comics.render();
 		},
 
-		characters: function(){
+		charactersSearch: function(name, quantity, page){
 			var timeStamp = this.ts;
 			var hash = md5(timeStamp+this.privateKey+this.publicKey);
+			var limit = quantity;
+			var offset = (page-1)*quantity;
 			var charactersModel = require('models/CharactersModel');
 			var models = new charactersModel();
-			models.fetch({ data: $.param({ apikey: this.publicKey, ts: timeStamp, hash: hash}) });
+			models.fetch({ data: $.param({ name: name, limit: limit, offset: offset, apikey: this.publicKey, ts: timeStamp, hash: hash})});
+			var charactersView = require('views/CharactersView');
+			var characters = new charactersView({
+				el: $('#comic'),
+				model:models
+			});
+			characters.addName(name);
+
+		},
+
+		characters: function(quantity,page){
+			var timeStamp = this.ts;
+			var hash = md5(timeStamp+this.privateKey+this.publicKey);
+			var limit = quantity;
+			var offset = (page-1)*quantity;
+			var charactersModel = require('models/CharactersModel');
+			var models = new charactersModel();
+			models.fetch({ data: $.param({ limit: limit, offset: offset, apikey: this.publicKey, ts: timeStamp, hash: hash}) });
 			var charactersView = require('views/CharactersView');
 			var characters = new charactersView({
 				el: $('#comic'),
 				model:models
 			});
 
-			characters.render();
 		},
 
 		comic: function(id){
